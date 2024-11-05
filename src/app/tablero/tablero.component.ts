@@ -15,13 +15,13 @@ export class TableroComponent implements OnInit {
   }
 
   generarTablero() {
-    this.tablero = Array(this.tamañoTablero).fill({ mina: false, revelado: false });
+    this.tablero = Array.from({ length: this.tamañoTablero }, () => ({ mina: false, revelado: false }));
     
     let minasColocadas = 0;
     while (minasColocadas < this.minas) {
       const posicion = Math.floor(Math.random() * this.tamañoTablero);
       if (!this.tablero[posicion].mina) {
-        this.tablero[posicion] = { mina: true, revelado: false };
+        this.tablero[posicion].mina = true; 
         minasColocadas++;
       }
     }
@@ -30,12 +30,10 @@ export class TableroComponent implements OnInit {
   revelarCuadro(index: number) {
     if (this.tablero[index].mina) {
       this.tablero[index].revelado = true;
-      alert('Perdiste')
-      this.generarTablero() 
+      alert('Perdiste');
+      this.generarTablero(); 
     } else {
       this.tablero[index].revelado = true; 
     }
   }
-  
 }
-
