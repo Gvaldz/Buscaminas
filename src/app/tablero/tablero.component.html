@@ -1,22 +1,8 @@
 <div class="tablero">
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-    <app-cuadro></app-cuadro>
-</div>
+    <app-cuadro 
+      *ngFor="let cuadro of tablero; let i = index"
+      [cuadro]="cuadro"
+      (click)="revelarCuadro(i)">
+    </app-cuadro>
+  </div>
+  

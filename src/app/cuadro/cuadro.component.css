@@ -1,3 +1,19 @@
+.cuadro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #9e9f9f;
+    cursor: pointer;
+    background-color: #6EA4BF;
+}
+  
+.cuadro.revelado {
+    background-color: #41337A;
+}
+  
 p{
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -1,17 +1,9 @@
-.tablero{
-    width: 40%;
-    background-color: rgb(0, 110, 255);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-app-cuadro{
-    width: 10%;
-    background-color: violet;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 5px;
-}
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    gap: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto; 
+  }
+  
