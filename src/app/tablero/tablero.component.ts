@@ -24,6 +24,7 @@ export class TableroComponent implements OnInit {
         this.tablero[posicion].mina = true; 
         minasColocadas++;
       }
+      console.log(this.tablero)
     }
   }
 
@@ -33,7 +34,14 @@ export class TableroComponent implements OnInit {
       alert('Perdiste');
       this.generarTablero(); 
     } else {
-      this.tablero[index].revelado = true; 
+      this.tablero[index].revelado = true;
+      this.calcularBombas(index)
     }
+  }
+
+  calcularBombas(index: number){
+    if(this.tablero[index-1].mina){
+      alert('Hay una mina cerca')
+    } 
   }
 }
